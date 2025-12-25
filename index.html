@@ -88,12 +88,16 @@
         .timeline-description { color: var(--text-secondary); }
         .timeline-description li { margin-bottom: 0.5rem; padding-left: 1rem; position: relative; }
         .timeline-description li::before { content: '→'; position: absolute; left: 0; color: var(--accent-primary); }
+        .education-grid { display: grid; gap: 2rem; }
         .education-card { background: var(--bg-tertiary); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-color); display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: start; }
         .education-icon { width: 60px; height: 60px; background: var(--accent-gradient); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
         .education-details h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
         .education-details .institution { font-size: 1.1rem; color: var(--accent-primary); margin-bottom: 0.5rem; }
         .education-details .period { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; }
         .education-details p { color: var(--text-secondary); }
+        .education-details ul { color: var(--text-secondary); margin-top: 0.5rem; }
+        .education-details ul li { margin-bottom: 0.25rem; padding-left: 1rem; position: relative; }
+        .education-details ul li::before { content: '•'; position: absolute; left: 0; color: var(--accent-primary); }
         .gpa-badge { display: inline-block; background: rgba(0, 212, 170, 0.1); color: var(--accent-primary); padding: 0.3rem 0.8rem; border-radius: 20px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; margin-top: 1rem; }
         .awards-section { margin-top: 3rem; }
         .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
@@ -238,17 +242,35 @@
             <h2 class="section-title">Professional Experience</h2>
         </div>
         <div class="timeline">
+            <!-- My AskAI - Updated to Present -->
             <div class="timeline-item">
-                <div class="timeline-date">Jan 2025 — Jul 2025</div>
+                <div class="timeline-date">Feb 2024 — Present</div>
+                <h3 class="timeline-title">AI / Cloud Developer</h3>
+                <div class="timeline-company">My AskAI — London, UK (Remote)</div>
+                <span class="timeline-badge">Part-time</span>
+                <ul class="timeline-description">
+                    <li>Developed robust backend infrastructure using Python and Quart async framework for high-performance AI application</li>
+                    <li>Designed and implemented APIs to interface with OpenAI, managing embeddings storage and retrieval in Pinecone vector database</li>
+                    <li>Integrated conversational AI bots for WhatsApp Business API and Discord, handling thousands of daily user interactions</li>
+                    <li>Orchestrated backend flow for document text extraction, chunking, embedding generation, and semantic search enabling efficient Q&A capabilities</li>
+                    <li>Implemented caching strategies with Redis to optimize API response times and reduce OpenAI API costs by 40%</li>
+                </ul>
+            </div>
+
+            <!-- Morfyus - Moved to 2024 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Jan 2024 — Dec 2024</div>
                 <h3 class="timeline-title">Software Engineer</h3>
                 <div class="timeline-company">Morfyus — Singapore (Remote)</div>
                 <span class="timeline-badge">Freelance</span>
                 <ul class="timeline-description">
-                    <li>Collaborating with cross-functional teams to solve complex software engineering challenges across diverse applications</li>
-                    <li>Architecting scalable solutions and implementing best practices for distributed systems</li>
-                    <li>Contributing to system design and code reviews for mission-critical features</li>
+                    <li>Collaborated with cross-functional teams to solve complex software engineering challenges across diverse applications</li>
+                    <li>Architected scalable solutions and implemented best practices for distributed systems</li>
+                    <li>Contributed to system design and code reviews for mission-critical features</li>
                 </ul>
             </div>
+
+            <!-- Rehanisoko -->
             <div class="timeline-item">
                 <div class="timeline-date">Mar 2024 — Present</div>
                 <h3 class="timeline-title">Software Engineer (Remote)</h3>
@@ -260,6 +282,8 @@
                     <li>Built event-driven data collection system processing millions of records for ML training datasets using Apache Kafka</li>
                 </ul>
             </div>
+
+            <!-- Dubizzle Labs -->
             <div class="timeline-item">
                 <div class="timeline-date">Jan 2024 — Oct 2024</div>
                 <h3 class="timeline-title">Software Engineer (Remote)</h3>
@@ -271,6 +295,8 @@
                     <li>Designed infrastructure-as-code templates using Terraform and Helm charts for consistent environment provisioning</li>
                 </ul>
             </div>
+
+            <!-- Primescale Technologies -->
             <div class="timeline-item">
                 <div class="timeline-date">2024</div>
                 <h3 class="timeline-title">Software Engineer</h3>
@@ -283,19 +309,8 @@
                     <li>Integrated multiple payment providers and developed real-time transaction monitoring dashboards</li>
                 </ul>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Feb 2023 — Nov 2023</div>
-                <h3 class="timeline-title">Backend Python AI Developer</h3>
-                <div class="timeline-company">My AskAI — London, UK (Remote)</div>
-                <span class="timeline-badge">Part-time</span>
-                <ul class="timeline-description">
-                    <li>Developed robust backend infrastructure using Python and Quart async framework for high-performance AI application</li>
-                    <li>Designed and implemented APIs to interface with OpenAI, managing embeddings storage and retrieval in Pinecone vector database</li>
-                    <li>Integrated conversational AI bots for WhatsApp Business API and Discord, handling thousands of daily user interactions</li>
-                    <li>Orchestrated backend flow for document text extraction, chunking, embedding generation, and semantic search enabling efficient Q&A capabilities</li>
-                    <li>Implemented caching strategies with Redis to optimize API response times and reduce OpenAI API costs by 40%</li>
-                </ul>
-            </div>
+
+            <!-- Bykea -->
             <div class="timeline-item">
                 <div class="timeline-date">Aug 2022 — Jan 2024</div>
                 <h3 class="timeline-title">Software Engineer</h3>
@@ -308,6 +323,22 @@
                     <li>Led migration of legacy monolith services to containerized microservices architecture</li>
                 </ul>
             </div>
+
+            <!-- Infratec -->
+            <div class="timeline-item">
+                <div class="timeline-date">Jan 2021 — Feb 2022</div>
+                <h3 class="timeline-title">Cloud Engineer</h3>
+                <div class="timeline-company">Infratec — Pakistan</div>
+                <ul class="timeline-description">
+                    <li>Automated code quality pipelines integrating SonarQube and Snyk into GitHub Actions with automated PR comments and security scanning</li>
+                    <li>Streamlined machine-data integration for Philip Morris using custom adapters and ETL pipelines for predictive analytics and future demand forecasting</li>
+                    <li>Shipped real-time currency tracking system for smart donation boxes including mobile app and backend infrastructure with live exchange rates</li>
+                    <li>Built MongoDB sharding infrastructure ensuring horizontal scaling and high availability for production workloads</li>
+                    <li>Provided Level 1 DevOps support to development and QA teams, managing deployments on lower environments</li>
+                </ul>
+            </div>
+
+            <!-- Yellow Corporation -->
             <div class="timeline-item">
                 <div class="timeline-date">Aug 2020 — Sep 2022</div>
                 <h3 class="timeline-title">R&D Engineer</h3>
@@ -321,6 +352,8 @@
                     <li>Created automated testing framework for hardware-software integration testing using pytest and mock hardware interfaces</li>
                 </ul>
             </div>
+
+            <!-- NED University -->
             <div class="timeline-item">
                 <div class="timeline-date">Jan 2019 — Sep 2020</div>
                 <h3 class="timeline-title">Research Engineer</h3>
@@ -345,17 +378,53 @@
                 <div class="section-label">// Education</div>
                 <h2 class="section-title">Academic Background</h2>
             </div>
-            <div class="education-card">
-                <div class="education-icon">🎓</div>
-                <div class="education-details">
-                    <h3>Bachelor of Engineering</h3>
-                    <div class="institution">NED University of Engineering and Technology</div>
-                    <div class="period">Oct 2014 — Oct 2018 | Karachi, Pakistan</div>
-                    <p>Major in Electronics Engineering</p>
-                    <p><strong>Relevant Coursework:</strong> Embedded Systems, Digital Signal Processing, Control Systems, Robotics</p>
-                    <div class="gpa-badge">GPA: 3.62 / 4.0</div>
+            <div class="education-grid">
+                <!-- Bachelor's Degree -->
+                <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <div class="education-details">
+                        <h3>Bachelor of Engineering</h3>
+                        <div class="institution">NED University of Engineering and Technology</div>
+                        <div class="period">Oct 2014 — Oct 2018 | Karachi, Pakistan</div>
+                        <p>Major in Electronics Engineering</p>
+                        <p><strong>Relevant Coursework:</strong> Embedded Systems, Digital Signal Processing, Control Systems, Robotics</p>
+                        <div class="gpa-badge">GPA: 3.62 / 4.0</div>
+                    </div>
+                </div>
+
+                <!-- HSC -->
+                <div class="education-card">
+                    <div class="education-icon">📚</div>
+                    <div class="education-details">
+                        <h3>Higher Secondary Certificate (H.S.C)</h3>
+                        <div class="institution">Govt. Degree Boys & Girls College SRE-III, Majeed</div>
+                        <div class="period">2012 — 2014 | Karachi, Pakistan</div>
+                        <p>Pre-Engineering (Science Group)</p>
+                        <ul>
+                            <li>Scored 868 out of 1100 (78.91%) in Karachi Board Examinations</li>
+                            <li>Grade A in Physics, Chemistry, and Mathematics</li>
+                        </ul>
+                        <div class="gpa-badge">Grade: A (78.91%)</div>
+                    </div>
+                </div>
+
+                <!-- SSC -->
+                <div class="education-card">
+                    <div class="education-icon">📖</div>
+                    <div class="education-details">
+                        <h3>Secondary School Certificate (S.S.C)</h3>
+                        <div class="institution">S.M. Public Academy Campus 5</div>
+                        <div class="period">2010 — 2012 | Gulistan-e-Jauhar, Karachi, Pakistan</div>
+                        <p>Science Group (Computer Science)</p>
+                        <ul>
+                            <li>Scored 708 out of 850 (83.29%) in Karachi Board Examinations</li>
+                            <li>Grade A-One in Mathematics, Computer Studies, Physics, and Chemistry</li>
+                        </ul>
+                        <div class="gpa-badge">Grade: A-One (83.29%)</div>
+                    </div>
                 </div>
             </div>
+
             <div class="awards-section">
                 <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 0;">Awards & Achievements</h3>
                 <div class="awards-grid">
@@ -363,9 +432,9 @@
                     <div class="award-card"><div class="award-icon">🥈</div><h4>Runners Up — Robo Intellect</h4><p>SPEC'17</p></div>
                     <div class="award-card"><div class="award-icon">🥇</div><h4>Winner — Circuit Designing</h4><p>SENTEC'17</p></div>
                     <div class="award-card"><div class="award-icon">📜</div><h4>Certificate — Robo Haste</h4><p>SENTEC'17</p></div>
-                    <div class="award-card"><div class="award-icon">🥚</div><h4>Certificate — Egg Drop Competition</h4><p>ASHRAE</p></div>
                 </div>
             </div>
+
             <div class="awards-section">
                 <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 0;">Professional Certifications</h3>
                 <div class="certifications-grid">
@@ -564,7 +633,7 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } });
         }, observerOptions);
-        document.querySelectorAll('.timeline-item, .publication-card, .project-card, .skill-category, .award-card, .cert-card').forEach(el => {
+        document.querySelectorAll('.timeline-item, .publication-card, .project-card, .skill-category, .award-card, .cert-card, .education-card').forEach(el => {
             el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'all 0.6s ease'; observer.observe(el);
         });
     </script>
